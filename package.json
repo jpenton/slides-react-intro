@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "mdx-deck src/index.mdx",
-    "build": "mdx-deck src/index.mdx"
+    "build": "mdx-deck build src/index.mdx"
   },
   "dependencies": {
     "mdx-deck": "^3.0.13"
