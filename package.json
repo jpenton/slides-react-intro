@@ -12,6 +12,7 @@
     "build:redirects": "cp _redirects public/"
   },
   "dependencies": {
+    "@emotion/styled": "^10.0.17",
     "mdx-deck": "^3.0.13"
   },
   "devDependencies": {
