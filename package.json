@@ -6,7 +6,7 @@
   "author": "Jonathan Penton <jonathan@penton.site>",
   "license": "MIT",
   "scripts": {
-    "dev": "mdx-deck src/index.mdx",
+    "start": "mdx-deck src/index.mdx",
     "build": "run-s build:**",
     "build:mdx": "mdx-deck build src/index.mdx",
     "build:redirects": "cp _redirects public/"
