@@ -1,6 +1,7 @@
 import theme from './theme'
 import { Notes } from 'mdx-deck'
 import RotatingImage from './components/RotatingImage'
+import ReactLogo from './images/react.png'
 
 export const themes = [theme]
 
@@ -8,13 +9,22 @@ export const themes = [theme]
 
 <RotatingImage
   duration={20}
-  src="https://raw.githubusercontent.com/facebook/create-react-app/master/packages/react-scripts/template/public/logo512.png"
+  src={ReactLogo}
   style={{
-    width: '256px'
+    width: '256px',
   }}
 />
 
 https://slides.penton.site/react-intro
+
+<Notes>
+
+- Greetings
+- Go to link
+- Projects already setup
+- Nothing to install
+
+</Notes>
 
 ---
 
@@ -26,34 +36,71 @@ React Evangelist
 
 <Notes>
 
-  - Name
-  - React years
-  - Start with basics
+- Name
+- Senior
+- Web development years
+  - Backend grabs data
+  - Frontend displays it
+- React years
+- Start with basics
 
 </Notes>
 
 ---
 
 import { Horizontal } from 'mdx-deck'
+import HTML5Logo from './images/html5.png'
+import CSSLogo from './images/css.png'
+import JSLogo from './images/js.png'
 
 # Web Development
 
-<Horizontal style={{ height: 'auto' }}>
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
-  />
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png"
-    style={{
-      padding: '30px'
-    }}
-  />
-  <img
-    src="https://miro.medium.com/max/720/1*LjR0UrFB2a__5h1DWqzstA.png"
-    style={{
-      padding: '24px',
-      paddingLeft: '30px',
-      marginTop: '30px'
-    }}
-  />
+<Horizontal
+  style={{ height: 'auto', display: 'flex', alignItems: 'flex-start' }}
+>
+  <img src={HTML5Logo} style={{ width: '256px', marginRight: '64px' }} />
+  <img src={CSSLogo} style={{ width: '256px', marginRight: '64px' }} />
+  <img src={JSLogo} style={{ width: '256px', marginTop: '12px' }} />
 </Horizontal>
+
+https://codesandbox.io/s/basic-html-7u4ng
+
+<Notes>
+
+- Strictly dynamic websites
+- 2 scenarios
+  - Backend
+  - SPA
+
+</Notes>
+
+---
+
+# What is React?
+
+<p style={{ width: '66%', textAlign: 'center' }}>A JavaScript library for displaying data through the use of components.</p>
+
+---
+
+import Counter from './components/Counter'
+import { FullScreenCode } from 'mdx-deck'
+
+# Counter
+
+<Counter />
+
+https://codesandbox.io/s/react-counter-chvgh
+
+---
+
+# Tic Tac Toe
+
+import TicTacToe from './components/TicTacToe'
+
+<link
+  href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap"
+  rel="stylesheet"
+/>
+<TicTacToe />
+
+https://codesandbox.io/s/react-tic-tac-toe-6qt8t

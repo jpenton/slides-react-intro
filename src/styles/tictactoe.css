@@ -1,0 +1,23 @@
+.board {
+  border: 1px solid white;
+  height: 256px;
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex: 1;
+}
+
+.cell {
+  flex: 1;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 48px;
+  color: white;
+}
