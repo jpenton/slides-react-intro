@@ -23,7 +23,6 @@ jobs:
           key: yarn-v1-deploy-{{ checksum "yarn.lock" }}
           paths:
             - ./node_modules
-            - ./public
 
 workflows:
   deploy:
