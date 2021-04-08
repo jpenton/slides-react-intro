@@ -1,0 +1,41 @@
+version: 2.1
+
+jobs:
+  deploy:
+    docker:
+      - image: circleci/node:lts
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-v1-deploy-{{ checksum "yarn.lock" }}
+            - yarn-v1-deploy-
+      - run:
+          name: Install Dependencies
+          command: yarn install
+      - run:
+          name: Build
+          command: yarn build
+      - run:
+          name: Deploy Site
+          command: yarn netlify deploy --prod
+      - save_cache:
+          key: yarn-v1-deploy-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+            - ./public
+
+workflows:
+  deploy:
+    jobs:
+      - approve:
+          type: approval
+          filters:
+            branches:
+              only: master
+      - deploy:
+          requires:
+            - approve
+          context:
+            - netlify
+            - slides-react-intro
